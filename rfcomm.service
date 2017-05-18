@@ -1,0 +1,10 @@
+[Unit]
+Description=RFCOMM service
+After=bluetooth.service
+Requires=bluetooth.service
+ 
+[Service]
+ExecStart=/usr/bin/rfcomm bind hci0 00:19:01:3D:EE:50
+ 
+[Install]
+WantedBy=gpsd.socket
